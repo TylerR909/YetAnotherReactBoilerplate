@@ -16,3 +16,4 @@
 * ESLint?
 * TSLint?
 * webpack-dev-server
+* react-hot-loader
