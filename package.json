@@ -1,0 +1,8 @@
+{
+  "name": "custom-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Tyler Swavely",
+  "license": "MIT",
+  "private": true
+}
