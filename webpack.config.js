@@ -45,4 +45,5 @@ module.exports = {
     open: true,
     historyApiFallback: true,
   },
+  devtool: 'cheap-eval-source-map',
 }

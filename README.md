@@ -19,3 +19,4 @@
 - TSLint?
 - webpack-dev-server
 - react-hot-loader
+- cheap-eval-source-map
