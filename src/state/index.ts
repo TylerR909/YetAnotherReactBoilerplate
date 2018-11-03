@@ -19,9 +19,15 @@ const rootReducer = combineReducers({ increments: incrementors })
  */
 export const history = createBrowserHistory()
 
+/**
+ * Redux Dev Tools browser extension - Dev Only
+ */
+// @ts-ignore
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+
 export default createStore(
   connectRouter(history)(rootReducer),
-  compose(applyMiddleware(routerMiddleware(history))),
+  composeEnhancers(applyMiddleware(routerMiddleware(history))),
 )
 
 /**
