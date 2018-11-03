@@ -1,7 +1,7 @@
 import React from 'react'
 import { hot } from 'react-hot-loader'
 import styled, { keyframes } from 'react-emotion'
-import Button from '@material-ui/core/Button'
+import Incrementor from './Incrementor'
 
 const Name = styled.div`
   font-size: 32px;
@@ -25,9 +25,7 @@ class App extends React.Component {
     return (
       <>
         <Name>custom-boilerplate</Name>
-        <Button variant="contained" color="primary">
-          Clicky
-        </Button>
+        <Incrementor />
       </>
     )
   }
