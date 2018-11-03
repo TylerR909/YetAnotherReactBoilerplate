@@ -7,6 +7,7 @@ import {
 } from 'redux'
 import { createBrowserHistory } from 'history'
 import { connectRouter, routerMiddleware } from 'connected-react-router'
+import thunk from 'redux-thunk'
 
 /**
  * Reducers
@@ -22,12 +23,12 @@ export const history = createBrowserHistory()
 /**
  * Redux Dev Tools browser extension - Dev Only
  */
-// @ts-ignore
+// @ts-ignore - "Does not exist on type window"
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 export default createStore(
   connectRouter(history)(rootReducer),
-  composeEnhancers(applyMiddleware(routerMiddleware(history))),
+  composeEnhancers(applyMiddleware(routerMiddleware(history), thunk)),
 )
 
 /**

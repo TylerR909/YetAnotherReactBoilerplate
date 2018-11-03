@@ -32,7 +32,24 @@ export const increment = (amount?: number): Action => ({
   payload: amount || 0,
 })
 
-export const decrement = (amount?: number): Action => ({
-  type: DECREMENT,
-  payload: amount || 0,
-})
+export const decrement = (amount?: number) => (dispatch, getState) => {
+  const {
+    increments: { counter: initialCount },
+  } = getState()
+
+  /**
+   * Redux-Thunk Demo. Only decrement after 2
+   * seconds if no increments were made
+   */
+  return setTimeout(() => {
+    const {
+      increments: { counter: currentCount },
+    } = getState()
+
+    initialCount >= currentCount &&
+      dispatch({
+        type: DECREMENT,
+        payload: amount || 0,
+      })
+  }, 2000)
+}
