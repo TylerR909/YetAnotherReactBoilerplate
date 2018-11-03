@@ -1,5 +1,19 @@
 import React from 'react'
 import { hot } from 'react-hot-loader'
+import styled, { keyframes } from 'react-emotion'
+
+const Name = styled.div`
+  font-size: 32px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  color: green;
+  opacity: 1;
+
+  animation: ${keyframes`
+    0% { opacity: 0 }
+    100% { opacity: 1 }
+  `} 1s;
+`
 
 class App extends React.Component {
   constructor(props) {
@@ -7,7 +21,7 @@ class App extends React.Component {
   }
 
   render() {
-    return <div>custom-boilerplate</div>
+    return <Name>custom-boilerplate</Name>
   }
 }
 
