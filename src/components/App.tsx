@@ -1,6 +1,7 @@
 import React from 'react'
+import { hot } from 'react-hot-loader'
 
-export default class App extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -9,3 +10,5 @@ export default class App extends React.Component {
     return <div>custom-boilerplate</div>
   }
 }
+
+export default hot(module)(App)

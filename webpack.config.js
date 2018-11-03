@@ -32,4 +32,8 @@ module.exports = {
     }),
     new ForkTsCheckerWebpackPlugin(),
   ],
+
+  devServer: {
+    open: true,
+  },
 }
