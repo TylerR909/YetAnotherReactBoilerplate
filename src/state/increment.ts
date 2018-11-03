@@ -16,9 +16,9 @@ const initialState = {
 export default function reducer(state = initialState, { type, payload }: Action) {
   switch (type) {
     case INCREMENT:
-      return { ...state, ...{ counter: state.counter + (payload || 1) } }
+      return { ...state, counter: state.counter + (payload || 1) }
     case DECREMENT:
-      return { ...state, ...{ counter: state.counter - (payload || 1) } }
+      return { ...state, counter: state.counter - (payload || 1) }
     default:
       return state
   }

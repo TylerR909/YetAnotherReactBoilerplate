@@ -8,13 +8,22 @@ const CounterContainer = styled.span`
   margin: 0 16px;
 `
 
-interface Props {
-  counter?: number
-  increment?: typeof increment
-  decrement?: typeof decrement
+export interface OwnProps {
+  name?: string
 }
 
-@connect(
+interface StateProps {
+  counter: number
+}
+
+interface DispatchProps {
+  increment: typeof increment
+  decrement: typeof decrement
+}
+
+type Props = OwnProps & StateProps & DispatchProps
+
+@connect<StateProps, DispatchProps, OwnProps>(
   ({ increments: { counter } }) => ({ counter }),
   { increment, decrement },
 )
@@ -30,14 +39,17 @@ class Incrementor extends React.PureComponent<Props> {
   }
 
   render() {
-    const { counter, increment, decrement } = this.props
+    const { counter, increment, decrement, name } = this.props
 
     return (
       <div style={{ flexDirection: 'row' }}>
         <Button variant="contained" color="primary" onClick={() => decrement()}>
           Decrement
         </Button>
-        <CounterContainer>{counter}</CounterContainer>
+        <CounterContainer>
+          {name && `${name}: `}
+          {counter}
+        </CounterContainer>
         <Button variant="contained" color="primary" onClick={() => increment()}>
           Increment
         </Button>

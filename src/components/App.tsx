@@ -25,7 +25,7 @@ class App extends React.Component {
     return (
       <>
         <Name>custom-boilerplate</Name>
-        <Incrementor />
+        <Incrementor name="Boilerplate" />
       </>
     )
   }
