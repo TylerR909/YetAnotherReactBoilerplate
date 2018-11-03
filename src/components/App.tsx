@@ -1,6 +1,7 @@
 import React from 'react'
 import { hot } from 'react-hot-loader'
 import styled, { keyframes } from 'react-emotion'
+import Button from '@material-ui/core/Button'
 
 const Name = styled.div`
   font-size: 32px;
@@ -21,7 +22,14 @@ class App extends React.Component {
   }
 
   render() {
-    return <Name>custom-boilerplate</Name>
+    return (
+      <>
+        <Name>custom-boilerplate</Name>
+        <Button variant="contained" color="primary">
+          Clicky
+        </Button>
+      </>
+    )
   }
 }
 
