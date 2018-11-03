@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 const APP_PATH = path.resolve(__dirname, 'src')
 
+const srcPath = pth => path.resolve(__dirname, `src/${pth}`)
+
 module.exports = {
   entry: APP_PATH,
 
@@ -14,6 +16,11 @@ module.exports = {
 
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
+    alias: {
+      components: srcPath('components'),
+      services: srcPath('services'),
+      state: srcPath('state'),
+    },
   },
 
   module: {

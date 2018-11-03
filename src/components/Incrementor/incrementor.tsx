@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Button from '@material-ui/core/Button'
-import { increment, decrement } from '../../state/increment'
+import { increment, decrement } from 'state/increment'
 import styled from 'react-emotion'
 
 const CounterContainer = styled.span`

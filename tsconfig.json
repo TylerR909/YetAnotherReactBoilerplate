@@ -10,7 +10,13 @@
     "target": "es2015",
     "module": "es2015",
     "jsx": "react",
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "baseUrl": "./src",
+    "paths": {
+      "components/*": ["components/*"],
+      "state/*": ["state/*"],
+      "services/*": ["services/*"]
+    }
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]

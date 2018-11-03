@@ -1,4 +1,4 @@
-import { Action } from './index'
+import { Action } from '.'
 
 /**
  * Actions

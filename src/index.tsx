@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'connected-react-router'
 import { Route, Switch } from 'react-router'
-import App from './components/App'
-import store, { history } from './state'
+import App from 'components/App'
+import store, { history } from 'state'
 
 ReactDOM.render(
   <Provider store={store}>
