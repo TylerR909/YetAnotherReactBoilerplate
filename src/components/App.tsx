@@ -1,13 +1,11 @@
-import React from 'react';
+import React from 'react'
 
 export default class App extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
   }
 
   render() {
-    return (
-      <div>custom-boilerplate</div>
-    );
+    return <div>custom-boilerplate</div>
   }
 }

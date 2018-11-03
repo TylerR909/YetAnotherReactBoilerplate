@@ -1,7 +1,7 @@
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const path = require('path');
-const APP_PATH = path.resolve(__dirname, 'src');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path')
+const APP_PATH = path.resolve(__dirname, 'src')
 
 module.exports = {
   entry: APP_PATH,
@@ -12,7 +12,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.json']
+    extensions: ['.ts', '.tsx', '.js', '.json'],
   },
 
   module: {
@@ -20,16 +20,16 @@ module.exports = {
       {
         test: /\.(ts|js)x?$/,
         loader: 'babel-loader',
-        exclude: /node_modules/
-      }
+        exclude: /node_modules/,
+      },
     ],
   },
 
   plugins: [
     new HtmlWebpackPlugin({
       inject: true,
-      template: path.join(APP_PATH, 'index.html')
+      template: path.join(APP_PATH, 'index.html'),
     }),
     new ForkTsCheckerWebpackPlugin(),
-  ]
-};
+  ],
+}
