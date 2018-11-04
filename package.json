@@ -39,6 +39,7 @@
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.1.0",
+    "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.4",
     "babel-plugin-emotion": "^9.2.11",
     "fork-ts-checker-webpack-plugin": "^0.4.14",
