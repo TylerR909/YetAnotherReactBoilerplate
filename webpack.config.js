@@ -17,6 +17,9 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
     alias: {
+      /**
+       * Also add aliases to tsconfig.json
+       */
       components: srcPath('components'),
       services: srcPath('services'),
       state: srcPath('state'),
