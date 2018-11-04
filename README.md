@@ -6,12 +6,12 @@
 - TypeScript
 - Babel
 - Webpack
-- React-Router
 - emotion-js
 - Material UI
-- Redux (Ducks Pattern)
-- Redux Thunk
-- GraphQL/Apollo
+- Redux ([Ducks Pattern](https://github.com/erikras/ducks-modular-redux))
+  - Redux Thunk
+  - connected-react-router
+- GraphQL/Apollo?
 
 ## Dev Tools
 
@@ -24,7 +24,7 @@
 - cheap-eval-source-map
 - Backend Mocking?
 
-### Useful Articles or packages
+### Useful Articles and packages
 
 - [Jest+Enzyme Testing](https://medium.com/netscape/testing-a-react-redux-app-using-jest-and-enzyme-b349324803a9)
 - redux-mock-store - Actions testing
