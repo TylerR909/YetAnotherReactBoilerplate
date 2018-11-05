@@ -2,6 +2,7 @@ import React from 'react'
 import { hot } from 'react-hot-loader'
 import styled, { keyframes } from 'react-emotion'
 import Incrementor from './Incrementor'
+import { Route, Switch } from 'react-router'
 
 const Name = styled.div`
   font-size: 32px;
@@ -22,11 +23,19 @@ class App extends React.Component {
   }
 
   render() {
-    return (
+    const subApp = () => (
       <>
         <Name>custom-boilerplate</Name>
         <Incrementor name="Boilerplate" />
       </>
+    )
+    return (
+      <div>
+        <Switch>
+          <Route exact path="/app" render={() => <div>default route</div>} />
+          <Route component={subApp} />
+        </Switch>
+      </div>
     )
   }
 }
